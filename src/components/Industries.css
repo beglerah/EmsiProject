@@ -1,0 +1,9 @@
+
+table {
+  border-collapse: collapse;
+}
+tr { 
+  border: solid;
+  border-width: 2px 0;
+  border-color: #ededed;
+}

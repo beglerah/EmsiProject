@@ -1,0 +1,23 @@
+h4 {
+    font-family: sans-serif;
+    margin: 0px;
+    color: #5c5c5c;
+    text-align: left;
+    font-size: 18px;
+    max-width: 8500px;
+    position: relative;
+    padding-bottom: 5px;
+  }
+  
+ /* 
+  h4:after {
+    content: "";
+    display: block;
+    width: 750px;
+    height: 2px;
+    background: #000;
+    right: 0;
+    top: 50%;
+    position: absolute;
+  }
+  */

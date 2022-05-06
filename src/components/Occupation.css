@@ -1,0 +1,12 @@
+.Body {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 2em;
+  }
+
+.flexbox-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+}
