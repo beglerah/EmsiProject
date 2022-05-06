@@ -29,13 +29,12 @@ export default class IndustriesTable extends React.Component {
         {this.state.loading || !this.state.APIdata ? (
           <div>loading...</div>
         ) : (
-          <div style = {{textAlign:'left', color: "grey", paddingTop: "50px"}}>
-            <div class = "header"> 
+          <div className="IndustryTable" style = {{textAlign:'left', color: "grey", paddingTop: "50px"}}>
+            <div className = "header"> 
               <h4>Industries Employing Computer Programmers</h4>
             </div>
-              <table style = {{"border-top": "solid","border-bottom": "solid", 'borderColor':"#ededed", "borderWidth":"2px"}}>
-
-      
+              <table style = {{"borderTop": "solid","borderBottom": "solid", 'borderColor':"#ededed", "borderWidth":"2px"}}>
+                <tbody>
 
                 <tr>
                   <th style={{width: '70%', height: "80px", fontSize: '15px'}}>Industry</th>
@@ -45,49 +44,41 @@ export default class IndustriesTable extends React.Component {
                 </tr>
 
                 <tr>
-                  <span style={{ color: 'dodgerblue' , fontSize: '15px'}}>
-                    <td style={{"paddingTop": "5px", height: "25px"}}> {this.state.APIdata.industries[0].title} </td>
-                  </span>
+                  <td style={{"paddingTop": "5px", height: "25px", color: 'dodgerblue' , fontSize: '15px'}}> {this.state.APIdata.industries[0].title} </td>
                   <td style={{textAlign: 'right'}}> {this.state.APIdata.industries[0].in_occupation_jobs} </td>
                   <td style={{textAlign: 'right'}}> {(this.state.APIdata.industries[0].in_occupation_jobs / this.state.APIdata.jobs * 100).toFixed(1)}% </td>
                   <td style={{textAlign: 'right'}}> {(this.state.APIdata.industries[0].in_occupation_jobs / this.state.APIdata.industries[0].jobs * 100).toFixed(1)}% </td>
                 </tr>
 
                 <tr>
-                  <span style={{ color: 'dodgerblue' , fontSize: '15px'}}>
-                    <td style={{"paddingTop": "5px", height: "20px"}}> {this.state.APIdata.industries[1].title} </td>
-                  </span>
+                  <td style={{"paddingTop": "5px", height: "20px", color: 'dodgerblue' , fontSize: '15px'}}> {this.state.APIdata.industries[1].title} </td>
                   <td style={{textAlign: 'right'}}> {this.state.APIdata.industries[1].in_occupation_jobs} </td>
                   <td style={{textAlign: 'right'}}> {(this.state.APIdata.industries[1].in_occupation_jobs / this.state.APIdata.jobs * 100).toFixed(1)}% </td>
                   <td style={{textAlign: 'right'}}> {(this.state.APIdata.industries[1].in_occupation_jobs / this.state.APIdata.industries[1].jobs * 100).toFixed(1)}% </td>
                 </tr>
 
                 <tr>
-                  <span style={{ color: 'dodgerblue' , fontSize: '15px'}}>
-                    <td style={{"paddingTop": "5px", height: "20px"}}> {this.state.APIdata.industries[2].title} </td>
-                  </span>
+                  <td style={{"paddingTop": "5px", height: "20px", color: 'dodgerblue' , fontSize: '15px'}}> {this.state.APIdata.industries[2].title} </td>
                   <td style={{textAlign: 'right'}}> {this.state.APIdata.industries[2].in_occupation_jobs} </td>
                   <td style={{textAlign: 'right'}}> {(this.state.APIdata.industries[2].in_occupation_jobs / this.state.APIdata.jobs * 100).toFixed(1)}% </td>
                   <td style={{textAlign: 'right'}}> {(this.state.APIdata.industries[2].in_occupation_jobs / this.state.APIdata.industries[2].jobs * 100).toFixed(1)}% </td>
                 </tr>
 
                 <tr>
-                  <span style={{ color: 'dodgerblue' , fontSize: '15px'}}>
-                    <td style={{"paddingTop": "5px", height: "20px"}}> {this.state.APIdata.industries[3].title} </td>
-                  </span>
+                  <td style={{"paddingTop": "5px", height: "20px", color: 'dodgerblue' , fontSize: '15px'}}> {this.state.APIdata.industries[3].title} </td>
                   <td style={{textAlign: 'right'}}> {this.state.APIdata.industries[3].in_occupation_jobs} </td>
                   <td style={{textAlign: 'right'}}> {(this.state.APIdata.industries[3].in_occupation_jobs / this.state.APIdata.jobs * 100).toFixed(1)}% </td>
                   <td style={{textAlign: 'right'}}> {(this.state.APIdata.industries[3].in_occupation_jobs / this.state.APIdata.industries[3].jobs * 100).toFixed(1)}% </td>
                 </tr>
 
                 <tr>
-                  <span style={{ color: 'dodgerblue' , fontSize: '15px'}}>
-                    <td style={{"paddingTop": "5px", height: "20px"}}> {this.state.APIdata.industries[4].title} </td>
-                  </span>
+                  <td style={{"paddingTop": "5px", height: "20px", color: 'dodgerblue' , fontSize: '15px'}}> {this.state.APIdata.industries[4].title} </td>
                   <td style={{textAlign: 'right'}}> {this.state.APIdata.industries[4].in_occupation_jobs} </td>
                   <td style={{textAlign: 'right'}}> {(this.state.APIdata.industries[4].in_occupation_jobs / this.state.APIdata.jobs * 100).toFixed(1)}% </td>
                   <td style={{textAlign: 'right'}}> {(this.state.APIdata.industries[4].in_occupation_jobs / this.state.APIdata.industries[0].jobs * 100).toFixed(1)}% </td>
                 </tr>
+
+                </tbody>
 
               </table>
           </div>

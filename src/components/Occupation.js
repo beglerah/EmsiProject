@@ -52,15 +52,15 @@ export default class Occupation extends React.Component {
 
     return (
 
-      <div style = {{textAlign:'center', "border-top": "solid","border-bottom": "solid", 'borderColor':"#ededed", "borderWidth":"2px"}}>
+      <div className="tableDef" style = {{textAlign:'center', borderTop: "solid", borderBottom: "solid", borderColor:"#ededed", "borderWidth":"2px"}}>
         {this.state.loading || !this.state.APIdata ? (
           <div>loading...</div>
         ) : (
 
-          <div class="flexbox-container">
+          <div className="flexbox-container">
   
 
-            <div style = {{textAlign:'center', "width": "400px", borderRight: "solid", 'borderColor':"#ededed", "borderWidth":"2px"}}>
+            <div className="TableBorder" style = {{textAlign:'center', "width": "400px", borderRight: "solid", 'borderColor':"#ededed", "borderWidth":"2px"}}>
               <p>
                 <span style={{ color: 'grey' , fontSize: '40px'}}>
                   {parseFloat(this.state.APIdata.jobs.regional).toLocaleString()} <br />
@@ -70,7 +70,7 @@ export default class Occupation extends React.Component {
               </p>
             </div>
 
-            <div style = {{textAlign:'center', "width": "400px", "border-right": "solid", 'borderColor':"#ededed", "borderWidth":"2px" }}>
+            <div style = {{textAlign:'center', "width": "400px", borderRight: "solid", 'borderColor':"#ededed", "borderWidth":"2px" }}>
               <p>
                 <span style={{ color: 'green' , fontSize: '40px'}}>
                   +{parseFloat(this.state.APIdata.jobs_growth.regional).toLocaleString()}% <br />
